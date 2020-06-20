@@ -1,11 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const ThingItem = (props) => {
-  return <li>{props.thing}</li>;
+  const { id, name } = props.thing;
+
+  return (
+    <form>
+      <input type='checkbox' id={`thing item ${id}`} />
+      <label htmlFor={`thing item ${id}`}> {name}</label>
+    </form>
+  );
 };
 
-ThingItem.propTypes = {
-  thing: PropTypes.string.isRequired,
-};
 export default ThingItem;
