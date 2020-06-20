@@ -2,10 +2,22 @@ ul {
   list-style: none;
 }
 
-.label.li {
+.label {
   float: left;
 }
 
-.add-container {
+.label-component {
   display: inline;
+}
+
+.time.create {
+  background-color: wheat;
+}
+
+a {
+  display: block;
+}
+
+span {
+  margin-left: 20px;
 }
