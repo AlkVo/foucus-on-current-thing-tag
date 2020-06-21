@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const LabelList = (props) => {
   const { labels } = props;
-  if (labels === null) return <div></div>;
+  if (labels === null || labels.length === 0) return <div></div>;
   return (
     <ul className='label-component'>
       {labels.map((label, index) => (
