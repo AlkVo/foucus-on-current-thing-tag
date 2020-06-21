@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { v5 as uuidv5 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import ThingContext from './ThingContext';
 import ThingReducer from './ThingReducer';
 
@@ -40,7 +40,12 @@ const ThingState = (props) => {
 
   //方法
   const addThing = (thing) => {
-    thing.id = uuidv5();
+    thing.id = uuidv4();
+
+    //添加日期
+    const date = new Date();
+    thing.time = [[date.getTime()]];
+
     dispatch({ type: ADD_THING, payload: thing });
   };
 
